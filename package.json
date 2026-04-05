@@ -1,0 +1,56 @@
+{
+  "name": "feishu-all-in-one",
+  "version": "1.0.0",
+  "description": "飞书全场景办公自动化All-in-One Skill for OpenClaw",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/index.js",
+    "build": "clawhub build",
+    "publish": "clawhub publish"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "feishu",
+    "lark",
+    "办公自动化",
+    "all-in-one"
+  ],
+  "author": "小弟 <your-email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.20.0",
+    "axios": "^1.6.8",
+    "lodash": "^4.17.21"
+  },
+  "clawhub": {
+    "id": "feishu-all-in-one",
+    "name": "飞书全场景办公自动化",
+    "description": "一站式飞书办公自动化Skill，整合文档、消息、日历、多维表格、云盘、审批等全功能，开箱即用",
+    "version": "1.0.0",
+    "author": "小弟",
+    "category": "办公自动化",
+    "tags": ["飞书", "Lark", "办公", "自动化", "All-in-One"],
+    "icon": "https://sf3-cn.feishucdn.com/obj/feishu-static/lark/helpcenter/assets/favicon.ico",
+    "configSchema": {
+      "appId": {
+        "type": "string",
+        "title": "飞书应用ID",
+        "description": "飞书开放平台创建的应用App ID",
+        "required": true
+      },
+      "appSecret": {
+        "type": "string",
+        "title": "飞书应用密钥",
+        "description": "飞书开放平台创建的应用App Secret",
+        "required": true,
+        "secret": true
+      },
+      "tenantKey": {
+        "type": "string",
+        "title": "企业租户Key（可选）",
+        "description": "企业版用户填写，个人用户留空"
+      }
+    }
+  }
+}
